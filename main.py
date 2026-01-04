@@ -1,3 +1,6 @@
+#IMPORT SYS
+import sys
+
 #IMPORT FUNCTIONS FROM STATS.PY
 from stats import word_count
 from stats import get_character_count
@@ -5,8 +8,10 @@ from stats import generate_sorted_list
 
 #PRINTS PUT WORD COUNT AND THE COUNT OF ALL CHARACTERS OF A BOOK
 def main():
-    path = "books/frankenstein.txt"
+    print("Usage: python3 main.py <path_to_book>")
+    path = sys.argv[1]
     book = get_book_text(path)
+
 
     dictionary = get_character_count(book)
     
