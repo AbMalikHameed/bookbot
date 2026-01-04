@@ -5,12 +5,13 @@ from stats import generate_sorted_list
 
 #PRINTS PUT WORD COUNT AND THE COUNT OF ALL CHARACTERS OF A BOOK
 def main():
-    book = get_book_text("books/frankenstein.txt")
+    path = "books/frankenstein.txt"
+    book = get_book_text(path)
 
     dictionary = get_character_count(book)
     
     print("============ BOOKBOT ============")
-    print(f"Analyzing book found at books/fankenstein.txt...")
+    print(f"Analyzing book found at {path}...")
     print("----------- Word Count ---------")
     print(word_count(book))
     print ("--------- Character Count -------")
